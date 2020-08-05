@@ -1,7 +1,7 @@
 /*
  * Firefly III API
  *
- * This is the official documentation of the Firefly III API. You can find accompanying documentation on the website of Firefly III itself (see below). Please report any bugs or issues. This version of the API is live from version v4.7.9 and onwards. You may use the \"Authorize\" button to try the API below. 
+ * This is the official documentation of the Firefly III API. You can find accompanying documentation on the website of Firefly III itself (see below). Please report any bugs or issues. This version of the API is live from version v4.7.9 and onwards. You may use the \"Authorize\" button to try the API below.
  *
  * The version of the OpenAPI document: 1.3.0
  * Contact: james@firefly-iii.org
@@ -31,7 +31,7 @@ pub struct Account {
     #[serde(rename = "account_number", skip_serializing_if = "Option::is_none")]
     pub account_number: Option<String>,
     #[serde(rename = "opening_balance", skip_serializing_if = "Option::is_none")]
-    pub opening_balance: Option<f64>,
+    pub opening_balance: Option<String>,
     #[serde(rename = "opening_balance_date", skip_serializing_if = "Option::is_none")]
     pub opening_balance_date: Option<String>,
     #[serde(rename = "virtual_balance", skip_serializing_if = "Option::is_none")]
