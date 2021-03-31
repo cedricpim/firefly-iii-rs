@@ -42,7 +42,7 @@ pub struct Account {
     pub current_balance_date: Option<String>,
     /// Use either currency_id or currency_code. Defaults to the user's default currency.
     #[serde(rename = "currency_id", skip_serializing_if = "Option::is_none")]
-    pub currency_id: Option<i32>,
+    pub currency_id: Option<String>,
     /// Use either currency_id or currency_code. Defaults to the user's default currency.
     #[serde(rename = "currency_code", skip_serializing_if = "Option::is_none")]
     pub currency_code: Option<String>,
@@ -76,7 +76,7 @@ pub struct Account {
     pub liability_start_date: Option<String>,
     /// Mandatory when type is liability. Interest percentage.
     #[serde(rename = "interest", skip_serializing_if = "Option::is_none")]
-    pub interest: Option<String>,
+    pub interest: Option<f32>,
     /// Mandatory when type is liability. Period over which the interest is calculated.
     #[serde(rename = "interest_period", skip_serializing_if = "Option::is_none")]
     pub interest_period: Option<InterestPeriod>,
