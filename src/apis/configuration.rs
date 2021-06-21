@@ -1,7 +1,7 @@
 /*
  * Firefly III API
  *
- * This is the official documentation of the Firefly III API. You can find accompanying documentation on the website of Firefly III itself (see below). Please report any bugs or issues. This version of the API is live from version v4.7.9 and onwards. You may use the \"Authorize\" button to try the API below. 
+ * This is the official documentation of the Firefly III API. You can find accompanying documentation on the website of Firefly III itself (see below). Please report any bugs or issues. This version of the API is live from version v4.7.9 and onwards. You may use the \"Authorize\" button to try the API below.
  *
  * The version of the OpenAPI document: 1.3.0
  * Contact: james@firefly-iii.org
@@ -40,7 +40,7 @@ impl Default for Configuration {
         Configuration {
             base_path: "https://demo.firefly-iii.org".to_owned(),
             user_agent: Some("OpenAPI-Generator/1.3.0/rust".to_owned()),
-            client: reqwest::Client::new(),
+            client: reqwest::ClientBuilder::new().connection_verbose(true).build().unwrap(),
             basic_auth: None,
             oauth_access_token: None,
             bearer_access_token: None,
